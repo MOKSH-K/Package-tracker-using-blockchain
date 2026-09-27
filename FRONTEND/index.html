@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ChainTrack | Blockchain Package Tracker</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="grid"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-box"></i>
+            </div>
+
+            <span>Chain<span class="green">Track</span></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#tracking">Track Package</a>
+            <a href="#roles">Dashboard</a>
+            <a href="#blockchain">Blockchain</a>
+        </div>
+
+        <button class="connect-btn" onclick="connectWallet()">
+            <i class="fa-solid fa-link"></i>
+            Connect Wallet
+        </button>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                <span class="pulse"></span>
+                Blockchain Powered Logistics
+            </div>
+
+            <h1>
+                Track Every Package.
+                <span>Trust Every Step.</span>
+            </h1>
+
+            <p>
+                A transparent shipment tracking platform where suppliers,
+                transporters and receivers work together using blockchain
+                technology.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#tracking" class="primary-btn">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                    Track Package
+                </a>
+
+                <a href="#roles" class="secondary-btn">
+                    Explore Dashboard
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>12,480+</strong>
+                    <span>Packages Tracked</span>
+                </div>
+
+                <div>
+                    <strong>99.8%</strong>
+                    <span>Tracking Accuracy</span>
+                </div>
+
+                <div>
+                    <strong>3,240+</strong>
+                    <span>Verified Deliveries</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3D Package Illustration -->
+        <div class="hero-visual">
+
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="package-container">
+
+                <div class="package">
+                    <div class="package-tape"></div>
+                    <div class="package-label">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </div>
+                </div>
+
+                <div class="floating-card card-one">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div>
+                        <small>Blockchain</small>
+                        <strong>Verified</strong>
+                    </div>
+                </div>
+
+                <div class="floating-card card-two">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <div>
+                        <small>Status</small>
+                        <strong>In Transit</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ROLE SECTION -->
+    <section class="section" id="roles">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                <i class="fa-solid fa-users"></i>
+                THREE PARTICIPANTS
+            </span>
+
+            <h2>
+                One Shipment.
+                <span>Three Trusted Roles.</span>
+            </h2>
+
+            <p>
+                Every participant has a dedicated role in the shipment lifecycle.
+            </p>
+
+        </div>
+
+
+        <div class="role-grid">
+
+            <!-- SUPPLIER -->
+
+            <div class="role-card supplier">
+
+                <div class="role-icon">
+                    <i class="fa-solid fa-industry"></i>
+                </div>
+
+                <div class="role-number">01</div>
+
+                <h3>Supplier</h3>
+
+                <p>
+                    Creates the shipment, enters package details and
+                    generates a unique blockchain shipment record.
+                </p>
+
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Create shipment
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Add package information
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Generate shipment ID
+                    </li>
+                </ul>
+
+                <button onclick="openDashboard('supplier')">
+                    Supplier Dashboard
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+
+            <!-- TRANSPORTER -->
+
+            <div class="role-card transporter">
+
+                <div class="role-icon">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+
+                <div class="role-number">02</div>
+
+                <h3>Transporter</h3>
+
+                <p>
+                    Handles the shipment and records important transportation
+                    events on the tracking system.
+                </p>
+
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Accept shipment
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Update location
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Update shipment status
+                    </li>
+                </ul>
+
+                <button onclick="openDashboard('transporter')">
+                    Transporter Dashboard
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+
+            <!-- RECEIVER -->
+
+            <div class="role-card receiver">
+
+                <div class="role-icon">
+                    <i class="fa-solid fa-house-user"></i>
+                </div>
+
+                <div class="role-number">03</div>
+
+                <h3>Receiver</h3>
+
+                <p>
+                    Tracks the shipment and verifies the package once
+                    it reaches its destination.
+                </p>
+
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Track shipment
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Verify blockchain record
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Confirm delivery
+                    </li>
+                </ul>
+
+                <button onclick="openDashboard('receiver')">
+                    Receiver Dashboard
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRACKING -->
+    <section class="tracking-section section" id="tracking">
+
+        <div class="tracking-container">
+
+            <div class="section-heading left">
+
+                <span class="section-tag">
+                    <i class="fa-solid fa-location-dot"></i>
+                    LIVE TRACKING
+                </span>
+
+                <h2>
+                    Where is your
+                    <span>package?</span>
+                </h2>
+
+                <p>
+                    Enter your shipment ID to view its complete journey.
+                </p>
+
+            </div>
+
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="trackingInput"
+                    placeholder="Enter Shipment ID e.g. CT-2026-001"
+                >
+
+                <button onclick="trackPackage()">
+                    Track
+                </button>
+
+            </div>
+
+
+            <!-- TRACKING RESULT -->
+
+            <div class="tracking-result" id="trackingResult">
+
+                <div class="shipment-header">
+
+                    <div>
+                        <span>SHIPMENT ID</span>
+                        <h3 id="shipmentId">CT-2026-001</h3>
+                    </div>
+
+                    <div class="status-badge">
+                        <span></span>
+                        In Transit
+                    </div>
+
+                </div>
+
+
+                <!-- Route -->
+
+                <div class="route">
+
+                    <div class="location">
+                        <div class="location-icon">
+                            <i class="fa-solid fa-industry"></i>
+                        </div>
+
+                        <div>
+                            <small>FROM</small>
+                            <strong>Bangalore</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="route-line">
+
+                        <div class="moving-dot"></div>
+
+                        <i class="fa-solid fa-truck route-truck"></i>
+
+                    </div>
+
+
+                    <div class="location">
+
+                        <div class="location-icon destination">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+
+                        <div>
+                            <small>TO</small>
+                            <strong>Mumbai</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Timeline -->
+
+                <div class="timeline">
+
+                    <div class="timeline-item completed">
+
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>Package Created</strong>
+                            <span>Supplier registered the shipment</span>
+                            <small>Sep 27 • 08:42 AM</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item completed">
+
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>Picked Up</strong>
+                            <span>Transporter collected the package</span>
+                            <small>Sep 27 • 10:15 AM</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item active">
+
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+
+                        <div>
+                            <strong>In Transit</strong>
+                            <span>Package is currently moving</span>
+                            <small>Current Location: Pune</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+
+                        <div>
+                            <strong>Delivered</strong>
+                            <span>Waiting for receiver confirmation</span>
+                            <small>Estimated: Sep 29</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BLOCKCHAIN -->
+    <section class="section blockchain-section" id="blockchain">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                <i class="fa-brands fa-ethereum"></i>
+                BLOCKCHAIN VERIFICATION
+            </span>
+
+            <h2>
+                Every update becomes
+                <span>tamper-resistant.</span>
+            </h2>
+
+            <p>
+                Shipment events are recorded as blockchain transactions,
+                creating a transparent history for all participants.
+            </p>
+
+        </div>
+
+
+        <div class="blockchain-container">
+
+            <div class="blockchain-card">
+
+                <div class="block-header">
+
+                    <div class="block-icon">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+
+                    <div>
+                        <span>BLOCK #184291</span>
+                        <h3>Shipment Update</h3>
+                    </div>
+
+                    <div class="verified">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Verified
+                    </div>
+
+                </div>
+
+
+                <div class="hash-row">
+
+                    <span>Transaction Hash</span>
+
+                    <code>
+                        0x7a91...f82c92
+                    </code>
+
+                    <button onclick="copyHash()">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="hash-row">
+
+                    <span>Previous Hash</span>
+
+                    <code>
+                        0x34ab...90de11
+                    </code>
+
+                </div>
+
+
+                <div class="hash-row">
+
+                    <span>Timestamp</span>
+
+                    <code>
+                        2026-09-27 14:42:21
+                    </code>
+
+                </div>
+
+            </div>
+
+
+            <!-- Blockchain chain -->
+
+            <div class="chain">
+
+                <div class="chain-block">
+                    <span>BLOCK</span>
+                    <strong>#184289</strong>
+                    <i class="fa-solid fa-link"></i>
+                </div>
+
+                <div class="chain-line"></div>
+
+                <div class="chain-block">
+                    <span>BLOCK</span>
+                    <strong>#184290</strong>
+                    <i class="fa-solid fa-link"></i>
+                </div>
+
+                <div class="chain-line"></div>
+
+                <div class="chain-block current">
+                    <span>BLOCK</span>
+                    <strong>#184291</strong>
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <div class="chain-line"></div>
+
+                <div class="chain-block">
+                    <span>NEXT</span>
+                    <strong>Pending</strong>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DASHBOARD MODAL -->
+
+    <div class="modal" id="dashboardModal">
+
+        <div class="modal-box">
+
+            <button class="close-modal" onclick="closeDashboard()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div id="dashboardContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-box"></i>
+            </div>
+
+            <span>Chain<span class="green">Track</span></span>
+
+        </div>
+
+        <p>
+            Transparent logistics powered by blockchain.
+        </p>
+
+        <div class="footer-right">
+            <span>
+                <i class="fa-solid fa-shield-halved"></i>
+                Secure
+            </span>
+
+            <span>
+                <i class="fa-solid fa-link"></i>
+                Decentralized
+            </span>
+
+            <span>
+                <i class="fa-solid fa-eye"></i>
+                Transparent
+            </span>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
